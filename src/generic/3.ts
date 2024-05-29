@@ -3,8 +3,8 @@
   Використовуйте generics, щоб вказати, що ці об'єкти можуть бути будь-якого типу.
 */
 
-function merge<T extends object, U extends object>(objA: T, objB: U) {
-  return Object.assign(objA, objB);
+function merge<T, U>(obj1: T, obj2: U): T & U {
+  return { ...obj1, ...obj2 };
 }
 
 export {};
